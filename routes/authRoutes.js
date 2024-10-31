@@ -7,7 +7,7 @@ const router = express.Router();
  * @swagger
  * /api/register:
  *   post:
- *     summary: Register a new user
+ *     summary: Register User
  *     tags: [Auth]
  *     requestBody:
  *       required: true
@@ -22,7 +22,7 @@ const router = express.Router();
  *                 type: string
  *     responses:
  *       201:
- *         description: User registered successfully
+ *         description: User Sukses Terdaftar
  *       400:
  *         description: Bad request
  */
@@ -47,7 +47,7 @@ router.post("/register", registerUser);
  *                 type: string
  *     responses:
  *       200:
- *         description: Login successful
+ *         description: Login Sukses
  *       401:
  *         description: Unauthorized
  */

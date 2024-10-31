@@ -68,7 +68,7 @@ router.get("/books", getBooks);
  *         description: ID Buku
  *     responses:
  *       200:
- *         description: Book details
+ *         description: Buku Ditemukan
  *       404:
  *         description: Buku Tidak Ditemukan
  */

@@ -6,13 +6,16 @@ const User = require("../models/userModel");
 dotenv.config();
 
 exports.registerUser = async (req, res) => {
+  console.log("Register user called");
   try {
     const { username, password } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
     const user = new User({ username, password: hashedPassword });
     await user.save();
+    console.log("User saved successfully");
     res.status(201).json({ message: "User registered successfully" });
   } catch (error) {
+    console.error("Error registering user:", error);
     res.status(400).json({ message: error.message });
   }
 };
